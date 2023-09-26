@@ -1,9 +1,13 @@
 import {Text, View, Image, StyleSheet} from 'react-native';
-import {useEffect, useState} from 'react';
+import {useEffect, useState, FC} from 'react';
 import axios from '../api';
 import {API_KEY} from '../constants';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { AppStackParamList } from '../../App';
 
-const Movie = ({route}) => {
+type Props = NativeStackScreenProps<AppStackParamList, 'Movie'>;
+
+const MovieScreen: FC<Props> = ({route}) => {
   const {movie} = route.params;
   const [movieItem, setMovieItem] = useState({});
 
@@ -28,7 +32,7 @@ const Movie = ({route}) => {
   );
 };
 
-export default Movie;
+export default MovieScreen;
 
 const styles = StyleSheet.create({
   poster: {

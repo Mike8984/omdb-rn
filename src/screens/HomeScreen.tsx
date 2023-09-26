@@ -12,7 +12,7 @@ import {Movie} from '../types';
 import MovieCard from '../components/MovieCard';
 import {API_KEY} from '../constants';
 
-const Home = () => {
+const HomeScreen = () => {
   const [value, setValue] = useState('');
   const [movies, setMovies] = useState<Movie[]>([]);
 
@@ -47,7 +47,7 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeScreen;
 
 const styles = StyleSheet.create({
   container: {

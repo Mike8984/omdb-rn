@@ -2,13 +2,15 @@ import {Image, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {FC} from 'react';
 import {Movie} from '../types';
 import {useNavigation} from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { AppStackParamList } from '../../App';
 
 type Props = {
   movie: Movie;
 };
 
 const MovieCard: FC<Props> = ({movie}) => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NativeStackNavigationProp<AppStackParamList>>();
 
   return (
     <TouchableOpacity
