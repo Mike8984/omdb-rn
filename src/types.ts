@@ -5,4 +5,7 @@ export type Movie = {
     Runtime: string
     Poster: string
     imdbID: string
+    Plot: string
+    Actors: string
+    Country: string
 }
